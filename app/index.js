@@ -1,14 +1,5 @@
-import { View, Text} from 'react-native';
+import { Redirect } from "expo-router";
 
-import React from 'react'
-
-const Home = () => {
-  return (
-    <View>
-        <Text>Home</Text>
-    </View>
-  )
+export default function Index() {
+    return <Redirect href="/home" />;
 }
-
-export default Home;
-

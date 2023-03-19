@@ -2,8 +2,7 @@ import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 
 // home screen
 import Welcome from "./home/welcome/Welcome";
-import Nearbyjobs from "./home/nearby/Nearbyjobs";
-import Popularjobs from "./home/popular/Popularjobs";
+import CarouselScreen from "./home/carousel/Carousel";
 
 // job details screen
 import Company from "./jobdetails/company/Company";
@@ -18,8 +17,7 @@ import NearbyJobCard from "./common/cards/nearby/NearbyJobCard";
 export {
   ScreenHeaderBtn,
   Welcome,
-  Nearbyjobs,
-  Popularjobs,
+  CarouselScreen,
   Company,
   JobTabs,
   JobAbout,
