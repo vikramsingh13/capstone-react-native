@@ -43,9 +43,9 @@ class CarouselScreen extends Component {
                     renderItem={this.renderItem}
                     sliderWidth={300}
                     itemWidth={200}
-                    layout="tinder"
-                    layoutCardOffset={`20`}
+                    layout="stack"
                     loop={true}
+                    layoutCardOffset={8}
                 />
             </View>
         );
