@@ -8,7 +8,12 @@ import {
 } from "react-native";
 import { Stack, useRouter, Link } from "expo-router";
 import { COLORS, icons, images, SIZES } from "../constants";
-import { CarouselScreen, ScreenHeaderBtn, Welcome, HomeBoxes } from "../components";
+import {
+    CarouselScreen,
+    ScreenHeaderBtn,
+    Welcome,
+    HomeBoxes,
+} from "../components";
 import { setCustomText } from "react-native-global-props";
 import { customTextProps } from "../styles/text";
 
@@ -19,6 +24,10 @@ const Home = () => {
 
     const handlePressed = () => {
         router.push("/");
+    };
+
+    const handleStepsPressed = () => {
+        router.push("/steps");
     };
 
     return (
@@ -50,7 +59,7 @@ const Home = () => {
                 >
                     <Welcome />
                     <CarouselScreen />
-                    <HomeBoxes />
+                    <HomeBoxes handleStepsPressed={handleStepsPressed} />
                 </View>
             </ScrollView>
         </SafeAreaView>

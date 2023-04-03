@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import BoxCard from "../../common/cards/BoxCard/BoxCard";
 import styles from "./homeBoxes.style";
 
-const HomeBoxes = () => {
+const HomeBoxes = ({handleStepsPressed}) => {
     return (
         <View style={styles.container}>
             <BoxCard
@@ -11,12 +11,14 @@ const HomeBoxes = () => {
                 subtitle="Pair with your device now"
                 outlined
                 btn
+                handlePress={""}
             />
             <BoxCard
                 icon="running"
                 title="Step Counter"
                 subtitle="Start moving now!"
                 btn
+                handlePress={handleStepsPressed}
             />
         </View>
     );
