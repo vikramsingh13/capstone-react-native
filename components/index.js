@@ -5,6 +5,9 @@ import Welcome from "./home/welcome/Welcome";
 import CarouselScreen from "./home/carousel/Carousel";
 import HomeBoxes from "./home/homeBoxes/HomeBoxes";
 
+//steps screen
+import LocationPerms from "./steps/locationPerms/LocationPerms";
+
 // job details screen
 import Company from "./jobdetails/company/Company";
 import { default as JobTabs } from "./jobdetails/tabs/Tabs";
@@ -20,6 +23,7 @@ export {
   Welcome,
   CarouselScreen,
   HomeBoxes,
+  LocationPerms,
   Company,
   JobTabs,
   JobAbout,

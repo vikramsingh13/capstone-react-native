@@ -6,5 +6,11 @@
     },
     "name": "my-app",
     "slug": "my-app"
+  },
+  "android": {
+    "permissions": [
+      "ACCESS_COARSE_LOCATION",
+      "ACTIVITY_RECOGNITION"
+    ]
   }
 }
