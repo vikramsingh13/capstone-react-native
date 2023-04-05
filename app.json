@@ -1,11 +1,17 @@
 {
   "expo": {
-    "scheme": "acme",
+    "scheme": "capstone-expo-app",
     "web": {
       "bundler": "metro"
     },
     "name": "my-app",
-    "slug": "my-app"
+    "slug": "my-app",
+    "extra": {
+      "eas": {
+        "projectId": "55429c22-d67e-43f0-90c5-bce7f43a8090"
+      }
+    },
+    "owner": "vikramsingh13"
   },
   "android": {
     "permissions": [

@@ -2,11 +2,12 @@ import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 
 // home screen
 import Welcome from "./home/welcome/Welcome";
-import CarouselScreen from "./home/carousel/Carousel";
+//import CarouselScreen from "./home/carousel/Carousel";
 import HomeBoxes from "./home/homeBoxes/HomeBoxes";
 
 //steps screen
 import LocationPerms from "./steps/locationPerms/LocationPerms";
+import GoogleFitSignIn from "./steps/googleSignIn/GoogleFitSignIn";
 
 // job details screen
 import Company from "./jobdetails/company/Company";
@@ -20,10 +21,13 @@ import BoxCard from "./common/cards/BoxCard/BoxCard";
 
 export {
   ScreenHeaderBtn,
+  //Home exports
   Welcome,
-  CarouselScreen,
+  //CarouselScreen,
   HomeBoxes,
+  //Steps exports
   LocationPerms,
+  GoogleFitSignIn,
   Company,
   JobTabs,
   JobAbout,
