@@ -1,6 +1,7 @@
 {
   "expo": {
     "scheme": "capstone-expo-app",
+    "plugins": ["@kingstinct/react-native-healthkit"],
     "web": {
       "bundler": "metro"
     },
