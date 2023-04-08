@@ -1,7 +1,6 @@
 {
   "expo": {
     "scheme": "capstone-expo-app",
-    "plugins": ["@kingstinct/react-native-healthkit"],
     "web": {
       "bundler": "metro"
     },
@@ -10,6 +9,16 @@
     "extra": {
       "eas": {
         "projectId": "55429c22-d67e-43f0-90c5-bce7f43a8090"
+      }
+    },
+    "ios": {
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "<< your usage description here >>",
+        "NSHealthUpdateUsageDescription": "<< your usage description here >>"
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.healthkit.background-delivery": true
       }
     },
     "owner": "vikramsingh13"
