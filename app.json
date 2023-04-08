@@ -11,7 +11,13 @@
         "projectId": "55429c22-d67e-43f0-90c5-bce7f43a8090"
       }
     },
-    "owner": "vikramsingh13"
+    "owner": "vikramsingh13",
+    "android": {
+      "package": "com.vikramsingh13.myapp"
+    },
+    "ios": {
+      "bundleIdentifier": "com.vikramsingh13.myapp"
+    }
   },
   "android": {
     "permissions": [

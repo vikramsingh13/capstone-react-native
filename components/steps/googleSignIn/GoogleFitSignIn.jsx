@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
+import * as WebBrowser from "expo-web-browser";
 import * as Google from "expo-auth-session/providers/google";
-import { makeRedirectUri } from 'expo-auth-session';
+import { makeRedirectUri } from "expo-auth-session";
 import {
     API_ANDROID_CLIENT_ID as androidClientId,
     API_EXPO_CLIENT_ID as expoClientId,
@@ -13,38 +14,43 @@ const SCOPES = [
     "https://www.googleapis.com/auth/fitness.body.read",
 ];
 
+//to dismiss popup after authentication
+WebBrowser.maybeCompleteAuthSession();
+
 const GoogleFitSignIn = () => {
-    const [user, setUser] = useState(null);
+    const [userInfo, setUserInfo] = useState(null);
     const [accessToken, setAccessToken] = useState();
 
     const [req, res, promptAsync] = Google.useAuthRequest({
         androidClientId: androidClientId,
         expoClientId: expoClientId,
-        redirectUri: makeRedirectUri({
-            useProxy: true,
-        })
+        redirectUri: makeRedirectUri({ scheme: "capstone-expo-app" }),
     });
 
     useEffect(() => {
         if (res && res.type === "success") {
             setAccessToken(res.authentication.accessToken);
+            getUserInfo();
         }
-    }, [res]);
+    }, [res, accessToken]);
 
-    const getUserData = async () => {
-        let userInfoRes = await fetch(
-            "https://www.googleapis.com/userinfo/v2/me",
-            {
-                headers: { Authorization: `Bearer ${accessToken}` },
-            }
-        );
+    const getUserInfo = async () => {
+        try {
+            const response = await fetch(
+                "https://www.googleapis.com/userinfo/v2/me",
+                {
+                    headers: { Authorization: `Bearer ${token}` },
+                }
+            );
 
-        userInfoRes.json().then((data) => {
-            setUser(data);
-        });
+            const user = await response.json();
+            setUserInfo(user);
+        } catch (error) {
+            // Add your own error handler here
+        }
     };
 
-    if (!user) {
+    if (!userInfo) {
         return (
             <View style={styles.container}>
                 <Text styles={styles.text}>You are not signed in.</Text>
@@ -52,13 +58,13 @@ const GoogleFitSignIn = () => {
                     title="Sign in with Google"
                     onPress={
                         accessToken
-                            ? getUserData
-                            : () => {                                
-                                promptAsync({
-                                    useProxy: true,
-                                    showInRecents: true,
-                                })
-                            }
+                            ? getUserInfo
+                            : () => {
+                                  promptAsync({
+                                      useProxy: true,
+                                      showInRecents: true,
+                                  });
+                              }
                     }
                 >
                     <Text styles={styles.text}>Sign in with Google</Text>
