@@ -55,7 +55,7 @@ const StepsIos = () => {
                         maxValue={goalStepCount}
                         title={"Steps"}
                         titleColor={COLORS.onBackground}
-                        titleStyle={{fontWeight: FONT.bold, fontSize: SIZES.large}}
+                        titleStyle={{fontSize: SIZES.large}}
                         circleBackgroundColor={COLORS.primaryVariant}
                         inActiveStrokeColor={COLORS.onBackground}
                     />
