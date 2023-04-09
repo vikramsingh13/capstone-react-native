@@ -36,9 +36,6 @@ const Home = () => {
                 options={{
                     headerStyle: { backgroundColor: COLORS.primary },
                     headerShadowVisible: false,
-                    headerLeft: () => (
-                        <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
-                    ),
                     headerRight: () => (
                         <ScreenHeaderBtn
                             iconUrl={images.profile}

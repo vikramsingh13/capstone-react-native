@@ -28,12 +28,12 @@ const StepsIos = () => {
             const subscription = await Pedometer.watchStepCount((result) => {
                 console.log("steps" + result.steps);
                 setCurrentStepCount(result.steps);
-            })();
+            });
+            subscription();
+
         } catch {
             console.log("steps didn't work");
         }
-
-        subscription();
     };
 
     useEffect(() => {
