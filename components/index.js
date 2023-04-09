@@ -2,7 +2,6 @@ import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 
 // home screen
 import Welcome from "./home/welcome/Welcome";
-//import CarouselScreen from "./home/carousel/Carousel";
 import HomeBoxes from "./home/homeBoxes/HomeBoxes";
 
 //steps screen
@@ -23,7 +22,6 @@ export {
   ScreenHeaderBtn,
   //Home exports
   Welcome,
-  //CarouselScreen,
   HomeBoxes,
   //Steps exports
   LocationPerms,
