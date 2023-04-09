@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     View,
     Text,
@@ -9,7 +9,6 @@ import {
 import { Stack, useRouter, Link } from "expo-router";
 import { COLORS, icons, images, SIZES } from "../constants";
 import {
-    CarouselScreen,
     ScreenHeaderBtn,
     Welcome,
     HomeBoxes,
@@ -20,6 +19,7 @@ import { customTextProps } from "../styles/text";
 setCustomText(customTextProps);
 
 const Home = () => {
+
     const router = useRouter();
 
     const handlePressed = () => {
@@ -58,7 +58,6 @@ const Home = () => {
                     }}
                 >
                     <Welcome />
-                    <CarouselScreen />
                     <HomeBoxes handleStepsPressed={handleStepsPressed} />
                 </View>
             </ScrollView>

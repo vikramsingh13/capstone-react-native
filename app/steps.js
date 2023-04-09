@@ -5,39 +5,20 @@ import {
     ScrollView,
     SafeAreaView,
     TouchableOpacity,
-    StyleSheet
+    Platform
 } from "react-native";
-import { Pedometer } from "expo-sensors";
 import { COLORS, icons, images, SIZES } from "../constants";
 import { Stack, useRouter, Link } from "expo-router";
 import { LocationPerms, ScreenHeaderBtn } from "../components";
+import StepsIos from "../components/steps/stepsIos/StepsIos";
 
 const Steps = () => {
-    const [isPedometerAvailable, setIsPedometerAvailable] =
-        useState("checking");
-    const [currentStepCount, setCurrentStepCount] = useState(0);
+    const [appPlatform, setAppPlatform] = useState("");
 
-    const subscribe = async () => {
-        
-
-        const isAvailable = await Pedometer.isAvailableAsync();
-        setIsPedometerAvailable(String(isAvailable));
-        try{
-
-            const subscription = await Pedometer.watchStepCount((result) => {
-                console.log("steps" + result.steps)
-                setCurrentStepCount(result.steps);
-            })();
-        }catch {
-            console.log("steps didn't work");
-        }
-
-        subscription();
-    };
-
+    //figure out the platform the user is using
     useEffect(() => {
-        subscribe();
-    }, []);
+        setAppPlatform(Platform.OS);
+    },[])
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.background }}>
@@ -66,34 +47,11 @@ const Steps = () => {
                         alignItems: "center",
                     }}
                 >
-                    <View style={styles.container}>
-                        <LocationPerms />
-                        <Text style={styles.text}>
-                            Pedometer.isAvailableAsync(): {isPedometerAvailable}
-                        </Text>
-                        <Text>
-                            Walk! And watch this go up: {currentStepCount}
-                        </Text>
-                    </View>
+                    <StepsIos />
                 </View>
             </ScrollView>
         </SafeAreaView>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "red",
-    },
-    text: {
-        fontSize: 20,
-        textAlign: "center",
-        margin: 10,
-        color: COLORS.primary,
-    },
-});
 
 export default Steps;
