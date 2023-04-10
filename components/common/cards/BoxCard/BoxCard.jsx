@@ -9,7 +9,7 @@ const BoxCard = ({ outlined, title, subtitle, icon, btn, handlePress }) => {
     const subColor = outlined ? COLORS.gray2 : COLORS.grayDark;
 
     return (
-        <TouchableOpacity onPress={handlePress}>
+        <TouchableOpacity onPress={() => handlePress(title)}>
             <View
                 style={
                     outlined

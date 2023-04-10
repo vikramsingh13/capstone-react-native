@@ -10,7 +10,7 @@ import {
 import { COLORS, icons, images, SIZES } from "../constants";
 import { Stack, useRouter, Link } from "expo-router";
 import { LocationPerms, ScreenHeaderBtn } from "../components";
-import StepsIos from "../components/steps/stepsIos/StepsIos";
+import {StepsIos} from "../components";
 
 const Steps = () => {
     const [appPlatform, setAppPlatform] = useState("");

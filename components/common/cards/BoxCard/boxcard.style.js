@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         padding: 20,
         marginTop: 15,
         flexDirection: "row",
+        display: "flex",
 
     },
     outlined: {
@@ -18,11 +19,15 @@ const styles = StyleSheet.create({
     textContainer:{
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column",
+        display: "flex",
+        flexGrow: 1,
     },
     title:{
         fontFamily: FONT.bold,
         fontSize: SIZES.large,
         margin: 15,
+        textTransform: "capitalize",
     },
     subtitle: {
         fontFamily: FONT.regular,

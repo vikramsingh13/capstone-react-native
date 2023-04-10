@@ -7,6 +7,13 @@ import HomeBoxes from "./home/homeBoxes/HomeBoxes";
 //steps screen
 import LocationPerms from "./steps/locationPerms/LocationPerms";
 import GoogleFitSignIn from "./steps/googleSignIn/GoogleFitSignIn";
+import StepsIos from "./steps/stepsIos/StepsIos";
+
+//workout screen
+import WorkoutBoxes from "./workout/workoutBoxes/WorkoutBoxes";
+import WorkoutPlan from "./workout/workoutPlan/WorkoutPlan";
+import RepTracker from "./workout/repTracker/RepTracker";
+
 
 // job details screen
 import Company from "./jobdetails/company/Company";
@@ -26,6 +33,12 @@ export {
   //Steps exports
   LocationPerms,
   GoogleFitSignIn,
+  StepsIos,
+  //Workout exports
+  WorkoutBoxes,
+  WorkoutPlan,
+  RepTracker,
+
   Company,
   JobTabs,
   JobAbout,

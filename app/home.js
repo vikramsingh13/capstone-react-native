@@ -26,8 +26,16 @@ const Home = () => {
         router.push("/");
     };
 
+    const handleHeartPressed = () => {
+        router.push("/");
+    };
+
     const handleStepsPressed = () => {
         router.push("/steps");
+    };
+
+    const handleWorkoutPressed = () => {
+        router.push("/workout");
     };
 
     return (
@@ -55,7 +63,8 @@ const Home = () => {
                     }}
                 >
                     <Welcome />
-                    <HomeBoxes handleStepsPressed={handleStepsPressed} />
+                    <HomeBoxes handleHeartPressed={handleHeartPressed} handleStepsPressed={handleStepsPressed} 
+                    handleWorkoutPressed={handleWorkoutPressed}/>
                 </View>
             </ScrollView>
         </SafeAreaView>
