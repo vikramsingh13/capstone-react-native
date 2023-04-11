@@ -2,12 +2,13 @@ export default WorkoutPlans = {
     push: {
         title: "push",
         exercises: [
-            "Bench press",
+            
             "Dumbbell press",
             "Inclined bench press",
             "Military press",
             "Lateral dumbbell raise",
             "Tricep pulldowns",
+            "Bench press",
         ],
     },
     pull: {

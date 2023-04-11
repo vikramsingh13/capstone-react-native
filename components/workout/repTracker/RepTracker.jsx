@@ -1,6 +1,7 @@
 import { View, Text, TextInput } from "react-native";
 import React, { useState, useEffect } from "react";
 import styles from "./repTracker.style";
+import RepCard from "../repCard/RepCard";
 
 const RepTracker = ({ name, sets = 3 }) => {
     const [tracker, setTracker] = useState([]);
@@ -16,8 +17,7 @@ const RepTracker = ({ name, sets = 3 }) => {
 
     useEffect(() => {
         const temp = Array.from({ length: sets }, (_, index) => (
-            <TextInput key={index} style={styles.textInput}
-            keyboardType="numeric"/>
+            <RepCard key={index} />
         ));
         setTracker(temp);
     }, []);

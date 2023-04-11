@@ -3,20 +3,19 @@ import { COLORS } from "../../../constants";
 
 const styles = StyleSheet.create({
     container:{
-        display:"flex",
+        display: "flex",
+        flexDirection: "row",
         justifyContent: "center",
-        textAlign: "center",
         alignItems: "center",
-        flexDirection: "column"
+        textAlign: "center",
+        margin: 10,
     },
-    planName:{
+    textInput:{
+        backgroundColor: COLORS.gray,
         color: COLORS.onBackground,
+        width: 100,
+        margin: 10,
     },
-    finishButton:{
-        padding: 20,
-        backgroundColor: COLORS.secondary,
-        color: COLORS.onBackground,
-    }
 });
 
 export default styles;

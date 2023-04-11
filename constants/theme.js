@@ -15,6 +15,8 @@ const COLORS = {
   surface: "#121212",
   error: "#CF6679",
 
+  goldStar: "#FFD700",
+
     //text colors
   onPrimary: "#000000",
   onSecondary: "#000000",

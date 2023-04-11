@@ -13,6 +13,7 @@ import StepsIos from "./steps/stepsIos/StepsIos";
 import WorkoutBoxes from "./workout/workoutBoxes/WorkoutBoxes";
 import WorkoutPlan from "./workout/workoutPlan/WorkoutPlan";
 import RepTracker from "./workout/repTracker/RepTracker";
+import RepCard from "./workout/repCard/RepCard";
 
 
 // job details screen
@@ -24,9 +25,12 @@ import Specifics from "./jobdetails/specifics/Specifics";
 
 // common
 import BoxCard from "./common/cards/BoxCard/BoxCard";
+import ExpCard from "./common/cards/expCard/ExpCard";
 
 export {
   ScreenHeaderBtn,
+  BoxCard,
+  ExpCard,
   //Home exports
   Welcome,
   HomeBoxes,
@@ -38,11 +42,12 @@ export {
   WorkoutBoxes,
   WorkoutPlan,
   RepTracker,
+  RepCard,
 
   Company,
   JobTabs,
   JobAbout,
   JobFooter,
   Specifics,
-  BoxCard,
+  
 };
