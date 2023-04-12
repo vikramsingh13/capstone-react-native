@@ -26,11 +26,13 @@ import Specifics from "./jobdetails/specifics/Specifics";
 // common
 import BoxCard from "./common/cards/BoxCard/BoxCard";
 import ExpCard from "./common/cards/expCard/ExpCard";
+import CalorieCard from "./common/cards/calorieCard/CalorieCard";
 
 export {
   ScreenHeaderBtn,
   BoxCard,
   ExpCard,
+  CalorieCard,
   //Home exports
   Welcome,
   HomeBoxes,

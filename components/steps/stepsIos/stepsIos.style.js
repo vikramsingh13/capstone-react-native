@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
     },
     text: {
         fontSize: SIZES.medium,
@@ -30,6 +32,9 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginBottom: 50,
     },
+    calorieText: {
+        margin: 10,
+    }
 });
 
 export default styles;
