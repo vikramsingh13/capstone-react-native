@@ -14,12 +14,13 @@ import { LocationPerms } from "../../index";
 import styles from "./stepsIos.style";
 import { images, COLORS, FONT, SIZES } from "../../../constants";
 import CircularProgress from "react-native-circular-progress-indicator";
+import {CalorieCard} from "../../index";
 
 const StepsIos = () => {
     const [isPedometerAvailable, setIsPedometerAvailable] =
         useState("checking");
-    const [currentStepCount, setCurrentStepCount] = useState(0);
-    const [goalStepCount, setGoalStepCount] = useState(1000);
+    const [currentStepCount, setCurrentStepCount] = useState(1000);
+    const [goalStepCount, setGoalStepCount] = useState(4000);
 
     const subscribe = async () => {
         const isAvailable = await Pedometer.isAvailableAsync();
@@ -62,6 +63,8 @@ const StepsIos = () => {
             </View>
             <Text style={styles.text}>Goal Steps: {goalStepCount}</Text>
             <Text style={styles.text}>Current Steps: {currentStepCount}</Text>
+
+            <CalorieCard steps={currentStepCount}/>
         </View>
     );
 };
