@@ -10,11 +10,11 @@ import {
 } from "react-native";
 import { Pedometer } from "expo-sensors";
 import { Stack, useRouter, Link } from "expo-router";
-import { LocationPerms } from "../../index";
+import { LocationPerms } from "../locationPerms/LocationPerms";
 import styles from "./stepsIos.style";
 import { images, COLORS, FONT, SIZES } from "../../../constants";
 import CircularProgress from "react-native-circular-progress-indicator";
-import {CalorieCard} from "../../index";
+import {CalorieCard} from "../../common/cards/calorieCard/CalorieCard";
 
 const StepsIos = () => {
     const [isPedometerAvailable, setIsPedometerAvailable] =
