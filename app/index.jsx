@@ -26,19 +26,22 @@ const SignOutButton = () => {
 };
 
 const Index = () => {
-    //return <Redirect href="/home" />;
-
-    return (
+    //comment this when login is enabled instead
+    return <Redirect href="/home" />;
+    
+    //commented login to speed up testing
+    /*return (
         <SafeAreaView style={styles.container}>
             <View style={styles.container}>
                 <SignOutButton />
             </View>
         </SafeAreaView>
             
-    );
+    );*/
 };
 
-export default withAuthenticator(Index);
+//commented login to speed up testing
+//export default withAuthenticator(Index);
 
 const styles = StyleSheet.create({
     container: {width: 400, flex: 1, padding: 20, alignSelf: 'center'},
