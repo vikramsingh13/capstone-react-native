@@ -42,6 +42,7 @@ const Index = () => {
 
 //commented login to speed up testing
 //export default withAuthenticator(Index);
+export default Index;
 
 const styles = StyleSheet.create({
     container: {width: 400, flex: 1, padding: 20, alignSelf: 'center'},
