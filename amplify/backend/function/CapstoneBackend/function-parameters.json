@@ -1,0 +1,12 @@
+{
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "dbPath",
+      "environmentVariableName": "DB_PATH"
+    }
+  ],
+  "secretNames": [
+    "asdf"
+  ]
+}

@@ -14,6 +14,17 @@
     "categories": {
       "auth": {
         "gaintrainrcapstone58c9641e": {}
+      },
+      "function": {
+        "CapstoneBackend": {
+          "dbPath": "\"find the db path\"",
+          "secretsPathAmplifyAppId": "dr0j40xdf384x",
+          "deploymentBucketName": "amplify-gaintrainrcapstone-dev-183933-deployment",
+          "s3Key": "amplify-builds/CapstoneBackend-3645734e6541516f4473-build.zip"
+        }
+      },
+      "api": {
+        "usersApi": {}
       }
     }
   }

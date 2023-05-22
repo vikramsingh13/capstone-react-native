@@ -1,4 +1,20 @@
 {
+  "api": {
+    "usersApi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CapstoneBackend"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "gaintrainrcapstone58c9641e": {
       "customAuth": false,
@@ -25,6 +41,48 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "CapstoneBackend": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_CapstoneBackend_dbPath": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CapstoneBackend"
+        }
+      ]
+    },
+    "AMPLIFY_function_CapstoneBackend_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CapstoneBackend"
+        }
+      ]
+    },
+    "AMPLIFY_function_CapstoneBackend_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CapstoneBackend"
+        }
+      ]
+    },
+    "AMPLIFY_function_CapstoneBackend_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CapstoneBackend"
+        }
+      ]
     }
   }
 }
