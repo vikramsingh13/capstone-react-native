@@ -14,7 +14,21 @@ const globalStyles = StyleSheet.create({
         alignItems: "center",
     },
 
-    
+    ContainerFlexRow: {
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+        alignItems: "center",
+        flexDirection: "row"
+    },
+
+    ContainerFlexCol: {
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+        alignItems: "center",
+        flexDirection: "column"
+    },
 });
 
 export default globalStyles; 
