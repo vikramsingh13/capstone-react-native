@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import globalStyles from "../styles/globalStyles";
 import {
     View,
     Text,
@@ -10,7 +11,7 @@ import {
 import { COLORS, icons, images, SIZES } from "../constants";
 import { Stack, useRouter, Link } from "expo-router";
 import { LocationPerms, ScreenHeaderBtn } from "../components";
-import {StepsIos} from "../components";
+import { StepsIos } from "../components";
 
 const Steps = () => {
     const [appPlatform, setAppPlatform] = useState("");
@@ -18,10 +19,10 @@ const Steps = () => {
     //figure out the platform the user is using
     useEffect(() => {
         setAppPlatform(Platform.OS);
-    },[])
+    }, [])
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.background }}>
+        <SafeAreaView style={globalStyles.SafeAreaViewStyle}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.primary },
@@ -36,14 +37,7 @@ const Steps = () => {
                 }}
             />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View
-                    style={{
-                        flex: 1,
-                        padding: SIZES.medium,
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
+                <View style={globalStyles.ScrollViewStyle}>
                     <StepsIos />
                 </View>
             </ScrollView>
