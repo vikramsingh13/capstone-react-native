@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import globalStyles from "../styles/globalStyles";
 import {
     View,
     Text,
@@ -39,7 +40,7 @@ const Home = () => {
     };
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.background }}>
+        <SafeAreaView style={globalStyles.SafeAreaViewStyle}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.primary },
@@ -54,17 +55,10 @@ const Home = () => {
                 }}
             />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View
-                    style={{
-                        flex: 1,
-                        padding: SIZES.medium,
-                        justifyContent: "center",
-                        alignItems: "center",
-                    }}
-                >
+                <View style={globalStyles.ScrollViewStyle}>
                     <Welcome />
-                    <HomeBoxes handleHeartPressed={handleHeartPressed} handleStepsPressed={handleStepsPressed} 
-                    handleWorkoutPressed={handleWorkoutPressed}/>
+                    <HomeBoxes handleHeartPressed={handleHeartPressed} handleStepsPressed={handleStepsPressed}
+                        handleWorkoutPressed={handleWorkoutPressed} />
                 </View>
             </ScrollView>
         </SafeAreaView>
