@@ -10,11 +10,11 @@ import {
 } from "react-native";
 import { Pedometer } from "expo-sensors";
 import { Stack, useRouter, Link } from "expo-router";
-import { LocationPerms } from "../locationPerms/LocationPerms";
+import LocationPerms from "../locationPerms/LocationPerms";
 import styles from "./stepsIos.style";
 import { images, COLORS, FONT, SIZES } from "../../../constants";
 import CircularProgress from "react-native-circular-progress-indicator";
-import {CalorieCard} from "../../common/cards/calorieCard/CalorieCard";
+import CalorieCard from "../../common/cards/calorieCard/CalorieCard";
 
 const StepsIos = () => {
     const [isPedometerAvailable, setIsPedometerAvailable] =
@@ -48,23 +48,23 @@ const StepsIos = () => {
             </Text>
             <LocationPerms />
             <View style={styles.imageContainer}>
-                    <CircularProgress
-                        value={currentStepCount}
-                        radius={100}
-                        duration={1000}
-                        progressValueColor={COLORS.primary}
-                        maxValue={goalStepCount}
-                        title={"Steps"}
-                        titleColor={COLORS.onBackground}
-                        titleStyle={{fontSize: SIZES.large}}
-                        circleBackgroundColor={COLORS.primaryVariant}
-                        inActiveStrokeColor={COLORS.onBackground}
-                    />
+                <CircularProgress
+                    value={currentStepCount}
+                    radius={100}
+                    duration={1000}
+                    progressValueColor={COLORS.primary}
+                    maxValue={goalStepCount}
+                    title={"Steps"}
+                    titleColor={COLORS.onBackground}
+                    titleStyle={{ fontSize: SIZES.large }}
+                    circleBackgroundColor={COLORS.primaryVariant}
+                    inActiveStrokeColor={COLORS.onBackground}
+                />
             </View>
             <Text style={styles.text}>Goal Steps: {goalStepCount}</Text>
             <Text style={styles.text}>Current Steps: {currentStepCount}</Text>
 
-            <CalorieCard steps={currentStepCount}/>
+            <CalorieCard steps={currentStepCount} />
         </View>
     );
 };
