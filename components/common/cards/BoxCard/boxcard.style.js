@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES } from "../../../../constants";
+import globalStyles from "../../../../styles/globalStyles";
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         backgroundColor: COLORS.secondary,
         width: "100%",
         padding: 20,
@@ -16,14 +17,14 @@ const styles = StyleSheet.create({
         borderColor: COLORS.secondary,
         backgroundColor: COLORS.background,
     },
-    textContainer:{
+    textContainer: {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
         display: "flex",
         flexGrow: 1,
     },
-    title:{
+    title: {
         fontFamily: FONT.bold,
         fontSize: SIZES.large,
         margin: 15,

@@ -44,7 +44,7 @@ const Workout = () => {
         },
     ];
     return (
-        <SafeAreaView style={globalStyles.SafeAreaViewStyle}>
+        <SafeAreaView style={globalStyles.styles.SafeAreaViewStyle}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.primary },
@@ -59,7 +59,7 @@ const Workout = () => {
                 }}
             />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={globalStyles.ScrollViewStyle}>
+                <View style={globalStyles.styles.ScrollViewStyle}>
                     {!planName && <WorkoutBoxes plans={plans} />}
                     {planName && <WorkoutPlan planName={planName} />}
                 </View>

@@ -3,7 +3,7 @@ import { COLORS } from "../../../constants";
 import globalStyles from "../../../styles/globalStyles";
 
 const styles = StyleSheet.create({
-    container: globalStyles.ContainerFlexCol,
+    container: globalStyles.styles.ContainerFlexCol,
     planName: {
         color: COLORS.onBackground,
     },

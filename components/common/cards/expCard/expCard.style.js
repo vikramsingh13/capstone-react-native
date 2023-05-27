@@ -1,21 +1,17 @@
 import { StyleSheet } from "react-native";
 import { COLORS, FONT, SIZES } from "../../../../constants";
+import globalStyles from "../../../../styles/globalStyles";
 
 const styles = StyleSheet.create({
-    container:{
-        backgroundColor: COLORS.primary,
-        width: "100%",
-        flexDirection: "column",
-        display: "flex",
-        zIndex: 1000,
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        position: "absolute",
-        bottom: 0,
-
-    },
-    starContainer:{
+    container: globalStyles.generateGlobalStyle("ContainerFlexCol",
+        {
+            backgroundColor: COLORS.primary,
+            zIndex: 1000,
+            position: "absolute",
+            bottom: 0,
+            width: "100%",
+        }),
+    starContainer: {
         flexDirection: "row",
         margin: 20,
     },

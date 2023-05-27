@@ -22,7 +22,7 @@ const Steps = () => {
     }, [])
 
     return (
-        <SafeAreaView style={globalStyles.SafeAreaViewStyle}>
+        <SafeAreaView style={globalStyles.styles.SafeAreaViewStyle}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.primary },
@@ -37,7 +37,7 @@ const Steps = () => {
                 }}
             />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={globalStyles.ScrollViewStyle}>
+                <View style={globalStyles.styles.ScrollViewStyle}>
                     <StepsIos />
                 </View>
             </ScrollView>

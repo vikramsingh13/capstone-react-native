@@ -40,7 +40,7 @@ const Home = () => {
     };
 
     return (
-        <SafeAreaView style={globalStyles.SafeAreaViewStyle}>
+        <SafeAreaView style={globalStyles.styles.SafeAreaViewStyle}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.primary },
@@ -55,7 +55,7 @@ const Home = () => {
                 }}
             />
             <ScrollView showsVerticalScrollIndicator={false}>
-                <View style={globalStyles.ScrollViewStyle}>
+                <View style={globalStyles.styles.ScrollViewStyle}>
                     <Welcome />
                     <HomeBoxes handleHeartPressed={handleHeartPressed} handleStepsPressed={handleStepsPressed}
                         handleWorkoutPressed={handleWorkoutPressed} />
