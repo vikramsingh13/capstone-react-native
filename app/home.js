@@ -41,19 +41,6 @@ const Home = () => {
 
     return (
         <SafeAreaView style={globalStyles.SafeAreaViewStyle}>
-            <Stack.Screen
-                options={{
-                    headerStyle: { backgroundColor: COLORS.primary },
-                    headerShadowVisible: false,
-                    headerRight: () => (
-                        <ScreenHeaderBtn
-                            iconUrl={images.profile}
-                            dimension="100%"
-                        />
-                    ),
-                    headerTitle: "",
-                }}
-            />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={globalStyles.ScrollViewStyle}>
                     <Welcome />
