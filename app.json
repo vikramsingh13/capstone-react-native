@@ -6,17 +6,23 @@
     },
     "name": "my-app",
     "slug": "my-app",
-    "extra": {
-      "eas": {
-        "projectId": "55429c22-d67e-43f0-90c5-bce7f43a8090"
-      }
-    },
-    "owner": "vikramsingh13",
+    "owner": "gaintrainr",
     "android": {
-      "package": "com.vikramsingh13.myapp"
+      "package": "com.gaintrainr.capstone"
     },
     "ios": {
-      "bundleIdentifier": "com.vikramsingh13.myapp"
+      "bundleIdentifier": "com.gaintrainr.capstone"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f1be3976-931c-461b-9e41-3ec6cdf0fb8a"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f1be3976-931c-461b-9e41-3ec6cdf0fb8a"
     }
   },
   "android": {
