@@ -39,7 +39,8 @@ const Layout = ({ children }) => {
                     />
                 ),
 
-                headerTitle: "",
+                headerTitle: {children},
+                headerTitleAlign: 'center'
             }}
         />
     );
