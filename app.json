@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "capstone-react-native-version2",
+    "slug": "capstone-react-native-version2",
+    "scheme": "capstonereactnativeversion2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.gaintrainr.capstonereactnativeversion2"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "sourceExts": [ "js", "json", "ts", "tsx", "jsx", "vue"],
+    "extra": {
+      "eas": {
+        "projectId": "0c9941a4-21fc-4164-815b-bc363b45cb1e"
+      }
+    }, 
+    "overrides": {
+      "metro": "0.76.4",
+      "metro-resolver": "0.76.4"
+    }
+  }
+}
