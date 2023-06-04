@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
         <Stack
             onLayout={onLayoutRootView}
             screenOptions={{
-                headerStyle: { backgroundColor: COLORS.primary },
+                headerStyle: { backgroundColor: COLORS.primaryVariant },
 
                 headerShadowVisible: false,
 
