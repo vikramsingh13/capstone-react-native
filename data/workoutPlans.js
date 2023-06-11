@@ -608,5 +608,20 @@ export default WorkoutPlans = {
           },
         ]
     },
+    
         
 };
+//little function that takes in an exercise name and searches the list, returning the exercise name and description if found
+export function getExercise(exerciseName){
+    for(const workout in  WorkoutPlans){
+        const currExercise = WorkoutPlans[workout].exercises;
+        const exercise = currExercise.find((exercise) => exercise.name.toLowerCase() === exerciseName.toLowerCase());
+        if(exercise){
+            return "Name: " + exercise.name +"\nDesciption: " + exercise.description;
+        }
+        else{
+            return "Exercise not Found";
+        }
+    }
+}
+
