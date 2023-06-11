@@ -136,7 +136,7 @@ export default WorkoutPlans = {
       abs: {
         title: "abs",
         exercises: [
-          "Crunches",
+         "Crunches",
           "Planks",
           "Russian twists",
           "Leg raises",
@@ -152,6 +152,27 @@ export default WorkoutPlans = {
           "Scissor kicks",
           "Woodchoppers",
         ],
+    },
+    shoulders:{
+        title: "shoulders",
+        exercises: [
+         "Overhead Press",
+         "Dumbbell Lateral Raises",
+         "Arnold Press",
+         "Front Raises",
+         "Upright Rows",
+         "Dumbbell Shoulder Press",
+         "Cable Lateral Raises",
+         "Seated Dumbbell Press",
+         "Reverse Flyes",
+         "Cable Face Pulls",
+         "Dumbbell Shrugs",
+         "Seated Military Press",
+         "Lateral Raise Machine",
+         "Kettlebell Press",
+         "Standing Military Press"
+            
+        ]
     },
         
 };
